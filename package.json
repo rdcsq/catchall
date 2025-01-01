@@ -1,0 +1,11 @@
+{
+  "name": "catchall",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "bun --filter '*' dev",
+    "check": "bun --filter '*' check"
+  }
+}

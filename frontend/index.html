@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>catch all http requests</title>
+  </head>
+  <body>
+    <div id="app" class="max-w-2xl w-full mx-auto my-0 px-6 pb-6">
+      <div class="top-0 sticky pt-6 bg-white">
+        <h1 class="font-bold text-lg">catch all http requests</h1>
+        <p>
+          send any http request to the following url and you'll see its data in
+          this page.
+        </p>
+        <div class="flex my-2">
+          <input
+            id="input-url"
+            readonly
+            class="px-4 py-2 rounded-l-lg border-y border-l w-full"
+            placeholder="loading url..."
+          />
+          <button
+            id="copy-link"
+            class="disabled:opacity-50 border-y border-r rounded-r-lg inline-block bg-zinc-200 enabled:hover:bg-zinc-300 px-2"
+          >
+            <img src="/src/assets/copy.svg" />
+          </button>
+        </div>
+        <div class="pb-2 border-b flex flex-wrap gap-4">
+          <div>
+            <input type="checkbox" id="newest-first" />
+            <label for="newest-first">Newest first</label>
+          </div>
+          <div>
+            <input type="checkbox" id="full-width" />
+            <label for="full-width">Full width</label>
+          </div>
+          <div>
+            <input type="checkbox" id="expanded" />
+            <label for="expanded">Expanded by default</label>
+          </div>
+          <div>
+            <input type="checkbox" id="wrap" />
+            <label for="wrap">Wrap plain text/JSON</label>
+          </div>
+        </div>
+      </div>
+      <div id="data" class="flex flex-col">
+        <p id="no-requests" class="text-zinc-400 mt-2">no requests yet...</p>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

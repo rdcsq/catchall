@@ -1,0 +1,9 @@
+services:
+  catchall:
+    container_name: catchall
+    restart: always
+    image: ghcr.io/rdcsq/catchall:main
+    volumes:
+      - ./env.js:/public/env.js
+    ports:
+      - 3007:3000
