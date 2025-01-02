@@ -73,7 +73,7 @@ socket.onclose = () => {
 
 const interval = setInterval(() => {
   socket.send("ping");
-}, 240);
+}, 240000);
 
 function handleData(data: RequestData) {
   noRequestsYet.remove();
